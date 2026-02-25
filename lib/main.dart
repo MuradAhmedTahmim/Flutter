@@ -65,6 +65,7 @@ class MyApp extends StatelessWidget {
             ),
           ],
         )
+            // If we use Row instead Column, then it will be horizontal
       ),
     );
   }
