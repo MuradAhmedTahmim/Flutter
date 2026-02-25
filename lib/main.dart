@@ -43,29 +43,47 @@ class MyApp extends StatelessWidget {
         //   ),
         // ),
 
-        body:Column(
-          children: [
-            // 1st box
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple,
-            ),
-            // 2nd box
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple[400],
-            ),
-            // 3rd box
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple[200],
-            ),
-          ],
-        )
-            // If we use Row instead Column, then it will be horizontal
+        // body:Column(
+        //   // mainAxisAlignment: MainAxisAlignment.center,
+        //   // crossAxisAlignment: CrossAxisAlignment.start,
+        //   // scrollDirection:Axis.horizontal,
+        //   children: [
+        //     // 1st box
+        //     Expanded(
+        //       child: Container(
+        //         // height: 200,
+        //         // width: 200,
+        //         color: Colors.deepPurple,
+        //       ),
+        //     ),
+        //     // 2nd box
+        //     Expanded(
+        //       flex: 3,
+        //       child: Container(
+        //         // height: 200,
+        //         // width: 200,
+        //         color: Colors.deepPurple[400],
+        //       ),
+        //     ),
+        //     // 3rd box
+        //     Expanded(
+        //       child: Container(
+        //         // height: 200,
+        //         // width: 200,
+        //         color: Colors.deepPurple[200],
+        //       ),
+        //     ),
+        //   ],
+        // )
+        // // If we use Row instead Column, then it will be horizontal
+        // // If the height/width is much bigger & can't fix in screen,
+        // // then we use ListView instead of Column/Row & can use ScrollDirection
+        // // ListView is used when we want to scroll
+
+
+        body: ListView.builder(),
+
+
       ),
     );
   }
