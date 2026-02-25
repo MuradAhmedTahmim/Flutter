@@ -81,7 +81,12 @@ class MyApp extends StatelessWidget {
         // // ListView is used when we want to scroll
 
 
-        body: ListView.builder(),
+        body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (context,index) => ListTile(
+            title: Text(index.toString()),
+          ),
+        ),
 
 
       ),
