@@ -13,36 +13,58 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text("My First App"),
-          backgroundColor: Colors.deepPurple[500],
-          elevation: 0,
-          leading: Icon(Icons.menu),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-        ),
-        // 39.22
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
+        // // backgroundColor: Colors.deepPurple[200],
+        // appBar: AppBar(
+        //   centerTitle: true,
+        //   title: Text("My First App"),
+        //   backgroundColor: Colors.deepPurple[500],
+        //   elevation: 0,
+        //   leading: Icon(Icons.menu),
+        //   actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
+        // ),
+        // body: Center(
+        //   child: Container(
+        //     height: 300,
+        //     width: 300,
+        //     decoration: BoxDecoration(
+        //       color: Colors.deepPurple,
+        //       // curve the corners a bit
+        //       borderRadius: BorderRadius.circular(20),
+        //     ),
+        //     padding: EdgeInsets.all(25),
+        //     // child: Text("Murad Ahmed",
+        //     //   style: TextStyle(
+        //     //     color: Colors.white,
+        //     //     fontSize: 28,
+        //     //     fontWeight: FontWeight.bold,
+        //     //   ),
+        //     // ),
+        //     child:Icon(Icons.favorite,color: Colors.white,),
+        //   ),
+        // ),
+
+        body:Column(
+          children: [
+            // 1st box
+            Container(
+              height: 200,
+              width: 200,
               color: Colors.deepPurple,
-              // curve the corners a bit
-              borderRadius: BorderRadius.circular(20),
             ),
-            padding: EdgeInsets.all(25),
-            // child: Text("Murad Ahmed",
-            //   style: TextStyle(
-            //     color: Colors.white,
-            //     fontSize: 28,
-            //     fontWeight: FontWeight.bold,
-            //   ),
-            // ),
-            child:Icon(Icons.favorite,color: Colors.white,),
-          ),
-        ),
+            // 2nd box
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple[400],
+            ),
+            // 3rd box
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.deepPurple[200],
+            ),
+          ],
+        )
       ),
     );
   }
