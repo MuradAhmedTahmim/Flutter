@@ -18,7 +18,7 @@ class ButtonGroup extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 50,),
+            SizedBox(height: 50),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
@@ -31,7 +31,7 @@ class ButtonGroup extends StatelessWidget {
               onPressed: () {},
               child: Text('Submit'),
             ),
-            SizedBox(height: 50,),
+            SizedBox(height: 50),
             SizedBox(
               height: 50,
               width: 200,
@@ -50,59 +50,61 @@ class ButtonGroup extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 30,),
+            SizedBox(height: 30),
             OutlinedButton(onPressed: () {}, child: Text('Outline Button')),
-            SizedBox(height: 10,),
-            TextButton(onPressed: () {} , child: Text('Read more',
-            style: TextStyle(
-              color: Colors.blue,
-              fontWeight: FontWeight.bold,
-              fontSize: 25,
-            )
-            )),
-
-            SizedBox(height: 30,),
-
-            Icon(Icons.phone_android,
-            size: 50,
-              color: Colors.red,
-            ),
-            
-            IconButton(onPressed: () {}, icon: Icon(Icons.delete, size:30, color:Colors.red)),
-
-            GestureDetector(
-              onLongPress: (){
-                print('Taped on long press');
-              },
-              onTap: (){
-                print('Taped on test');
-              },
-              child: Text('This is test text',
-              style: TextStyle(
-                fontSize: 50
-              ),
-              ),
-            ),
-
-            InkWell(
-              onTap: (){
-                print('On taped inkwell');
-              },
-              child: Text('This is test text 2',
+            SizedBox(height: 10),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                'Read more',
                 style: TextStyle(
-                    fontSize: 50
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
                 ),
               ),
             ),
 
+            SizedBox(height: 30),
+
+            Icon(Icons.phone_android, size: 50, color: Colors.red),
+
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.delete, size: 30, color: Colors.red),
+            ),
+
+            GestureDetector(
+              onLongPress: () {
+                print('Taped on long press');
+              },
+              onTap: () {
+                print('Taped on test');
+              },
+              child: Text('This is test text', style: TextStyle(fontSize: 50)),
+            ),
+
+            InkWell(
+              onTap: () {
+                print('On taped inkwell');
+              },
+              child: Text(
+                'This is test text 2',
+                style: TextStyle(fontSize: 50),
+              ),
+            ),
           ],
         ),
       ),
 
-      floatingActionButton: FloatingActionButton(onPressed: (){
+      floatingActionButton: FloatingActionButton(
+       backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
+        onPressed: () {
           print('Clicked on add');
-      },child: Icon(Icons.add), ),
-
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
