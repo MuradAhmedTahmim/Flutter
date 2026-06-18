@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
+import 'ButtonGroup.dart';
 
 class MyApp extends StatelessWidget{
   MyApp({super.key});
@@ -8,8 +9,9 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'NewApp',
-      home: Home(),
+      home:ButtonGroup(),
     );
   }
 }
